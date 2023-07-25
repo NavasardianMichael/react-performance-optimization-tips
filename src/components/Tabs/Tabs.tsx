@@ -11,6 +11,7 @@ import UseCallback from './UseCallback/Main';
 import UseDeferredValue from './UseDeferredValue/Main';
 import UseTransition from './UseTransition/Main';
 import StateManagement from './StateManagement/Main';
+import Profiler from './Profiler/Main';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -73,6 +74,7 @@ export default function Tabs() {
         <Tab sx={{textTransform: 'unset'}} label="useTransition" {...a11yProps(6)} />
         <Tab sx={{textTransform: 'unset'}} label="webpackBundleAnalyzer" {...a11yProps(7)} />
         <Tab sx={{textTransform: 'unset'}} label="state mamangement" {...a11yProps(8)} />
+        <Tab sx={{textTransform: 'unset'}} label="Profiler" {...a11yProps(9)} />
       </TabsList>
       <TabPanel value={value} index={0}>
         <Typography sx={{mb:1}} variant="h4" component="h4">React performance optimization (tips, best practices)</Typography>
@@ -101,6 +103,9 @@ export default function Tabs() {
       </TabPanel>
       <TabPanel value={value} index={8}>
         <StateManagement />
+      </TabPanel>
+      <TabPanel value={value} index={9}>
+        <Profiler />
       </TabPanel>
     </Box>
   );
