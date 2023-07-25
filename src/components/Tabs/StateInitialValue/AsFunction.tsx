@@ -1,20 +1,16 @@
 import { TextField } from "@mui/material"
+import { WithCodeHinter } from "components/WithCodeHinter/WithCodeHinter"
 import { memo, useState } from "react"
-import { WithCodeHinter } from "../../WithCodeHinter/WithCodeHinter"
 
 const code = `
 export default memo(function AsFunction() {
 
     const getExpensiveCalculationsResult = () => {
-        const msStart = Date.now()
         let iteration = 0
 
         while(iteration < 100_000_000) {
             iteration ++
         }
-
-        const msEnd = Date.now()
-        alert('getExpensiveCalculationsResult called, which took ' + (msEnd - msStart) + ' ms')
 
         return ''
     }
@@ -35,15 +31,11 @@ export default memo(function AsFunction() {
 export default memo(function AsFunction() {
 
     const getExpensiveCalculationsResult = () => {
-        const msStart = Date.now()
         let iteration = 0
 
         while(iteration < 100_000_000) {
             iteration ++
         }
-
-        const msEnd = Date.now()
-        alert('getExpensiveCalculationsResult called, which took ' + (msEnd - msStart) + ' ms')
 
         return ''
     }

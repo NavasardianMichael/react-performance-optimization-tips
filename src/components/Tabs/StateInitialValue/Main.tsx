@@ -9,9 +9,8 @@ export default function UseStateInitialValue() {
 
     return (
         <div>
-            <h2>useState initial value</h2>
             <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">Initial Value is set as</FormLabel>
+                <FormLabel id="demo-radio-buttons-group-label">Initial value of the useState is set as</FormLabel>
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
                     value={isAsValue ? 'asValue' : 'asFunction'}
@@ -23,7 +22,7 @@ export default function UseStateInitialValue() {
                     <FormControlLabel value="asFunction" control={<Radio />} label="function" />
                 </RadioGroup>
             </FormControl>
-            <div key={isAsValue ? 'asValue' : 'asFunction'}>
+            <div>
                 {
                     isAsValue ?
                     <AsValue /> :

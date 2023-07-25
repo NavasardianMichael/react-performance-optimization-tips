@@ -1,8 +1,8 @@
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import { NotificationContext } from 'contexts/notificactions/Provider';
+import { NotificationContextType } from 'contexts/notificactions/types';
 import * as React from 'react';
-import { NotificationContext } from '../../contexts/notificactions/Provider';
-import { NotificationContextType } from '../../contexts/notificactions/types';
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -28,7 +28,7 @@ export default function Notification() {
   return (
     <Snackbar open={!!(name && ms)} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
-          The {name} rendering took {ms.toFixed(2)} ms
+          The "{name}" profilder says - rendering took {ms.toFixed(2)} ms
         </Alert>
     </Snackbar>
   );
