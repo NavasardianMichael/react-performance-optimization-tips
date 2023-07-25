@@ -1,6 +1,6 @@
 import { ChangeEventHandler, FC, memo } from 'react'
-import { Country } from './Main';
 import { TextField } from "@mui/material"
+import { Country } from 'api/countries'
 
 type Props = {
     values: Country

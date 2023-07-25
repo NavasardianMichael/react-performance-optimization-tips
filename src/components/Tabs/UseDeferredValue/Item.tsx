@@ -1,6 +1,5 @@
-import { ChangeEventHandler, FC, memo } from 'react'
-import { Country } from './Main';
-import { TextField } from "@mui/material"
+import { FC, memo } from 'react';
+import { Country } from 'api/countries';
 import { getExpensiveCalculationsResult } from 'helpers/functions/commons';
 
 type Props = {
@@ -17,7 +16,7 @@ const initialStyles: React.CSSProperties = {
     color: '#ffff'
 }
 
-const Item: FC<Props> = ({
+const Item: FC<Props> = memo(({
     values: { 
         area,
         name,
@@ -30,16 +29,16 @@ const Item: FC<Props> = ({
 
     getExpensiveCalculationsResult(2000000)
 
-  return (
-    <div style={{...initialStyles, background: '#'+Math.floor(Math.random()*16777215).toString(16)}}>
-        <p>custom text: {customText}</p> 
-        <p>name: {name}</p> 
-        <p>area: {area}</p> 
-        <p>capital: {capital}</p> 
-        <p>region: {region}</p> 
-        <p>population: {population}</p> 
-    </div>
-  )
-};
+    return (
+        <div style={{...initialStyles, background: '#'+Math.floor(Math.random()*16777215).toString(16)}}>
+            <p>custom text: {customText}</p> 
+            <p>name: {name}</p> 
+            <p>area: {area}</p> 
+            <p>capital: {capital}</p> 
+            <p>region: {region}</p> 
+            <p>population: {population}</p> 
+        </div>
+    )
+});
 
-export default memo(Item)
+export default Item

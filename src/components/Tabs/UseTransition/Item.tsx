@@ -1,6 +1,6 @@
+import { Country } from 'api/countries';
 import { getExpensiveCalculationsResult, shuffle } from 'helpers/functions/commons';
 import { FC, memo } from 'react';
-import { Country } from './Main';
 
 type Props = {
     values: Country
@@ -26,14 +26,14 @@ const Item: FC<Props> = ({
 
     getExpensiveCalculationsResult(10000000)
 
-  return (
-    <div style={{...initialStyles, background: '#'+Math.floor(Math.random()*16777215).toString(16)}}>
-        <p>name: {shuffle(name.split('')).join('')}</p> 
-        <p>area: {shuffle(area.toString().split('')).join('')}</p> 
-        <p>region: {shuffle(region.split('')).join('')}</p> 
-        <p>population: {shuffle(population.toString().split('')).join('')}</p> 
-    </div>
-  )
+    return (
+        <div style={{...initialStyles, background: '#'+Math.floor(Math.random()*16777215).toString(16)}}>
+            <p>name: {shuffle(name.split('')).join('')}</p> 
+            <p>area: {shuffle(area.toString().split('')).join('')}</p> 
+            <p>region: {shuffle(region.split('')).join('')}</p> 
+            <p>population: {shuffle(population.toString().split('')).join('')}</p> 
+        </div>
+    )
 };
 
 export default memo(Item)

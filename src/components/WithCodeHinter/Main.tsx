@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 
+import styles from './styles.module.css'
+
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
@@ -33,18 +35,21 @@ export const WithCodeHinter: FC<PropsWithChildren<T_Props>> = ({ children, code 
     const handleClose = () => setOpen(false);
 
     return (
-        <div>
-            <div>{children}</div>
-            <Button onClick={handleOpen} sx={{ mt: 2 }} variant="outlined" startIcon={<CodeIcon />}>
+        <Box>
+            <Button  sx={{ my: 2 }} onClick={handleOpen} variant="outlined" startIcon={<CodeIcon />}>
                 Show code
             </Button>
+            <Box>{children}</Box>
             <Modal
                 open={open}
                 onClose={handleClose}
             >
-                <Box sx={style}>
+                <Box 
+                    sx={style} 
+                    className={styles.modal}
+                >
                     <Typography id="modal-modal-title" variant="h5" component="h5">
-                        Code of the Currrent Component 
+                        Source of the currrent component 
                         <hr />
                     </Typography>
                     <pre>
@@ -54,6 +59,6 @@ export const WithCodeHinter: FC<PropsWithChildren<T_Props>> = ({ children, code 
                     </pre>
                 </Box>
             </Modal>
-        </div>
+        </Box>
     )
 }

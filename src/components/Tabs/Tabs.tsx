@@ -10,6 +10,7 @@ import Memo from './Memo/Main';
 import UseCallback from './UseCallback/Main';
 import UseDeferredValue from './UseDeferredValue/Main';
 import UseTransition from './UseTransition/Main';
+import StateManagement from './StateManagement/Main';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -53,7 +54,7 @@ export default function Tabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: '80vh' }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: '90vh' }}
     >
       <TabsList
         orientation="vertical"
@@ -71,10 +72,11 @@ export default function Tabs() {
         <Tab sx={{textTransform: 'unset'}} label="useDeferredValue" {...a11yProps(5)} />
         <Tab sx={{textTransform: 'unset'}} label="useTransition" {...a11yProps(6)} />
         <Tab sx={{textTransform: 'unset'}} label="webpackBundleAnalyzer" {...a11yProps(7)} />
+        <Tab sx={{textTransform: 'unset'}} label="state mamangement" {...a11yProps(8)} />
       </TabsList>
       <TabPanel value={value} index={0}>
-        <Typography variant="h4" component="h4">React performance optimization (tips, best practices)</Typography>
-        <Typography>React performance optimization (tips, best practices)</Typography>
+        <Typography sx={{mb:1}} variant="h4" component="h4">React performance optimization (tips, best practices)</Typography>
+        <Typography>Performance optimization is not a mere luxury, it's a necessity</Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <UseStateInitialValue />
@@ -96,6 +98,9 @@ export default function Tabs() {
       </TabPanel>
       <TabPanel value={value} index={7}>
         <WebpackBundleAnalyzer />
+      </TabPanel>
+      <TabPanel value={value} index={8}>
+        <StateManagement />
       </TabPanel>
     </Box>
   );

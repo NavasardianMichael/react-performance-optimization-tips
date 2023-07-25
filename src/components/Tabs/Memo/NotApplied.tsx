@@ -1,5 +1,5 @@
+import { Country } from 'api/countries';
 import { FC } from 'react'
-import { Country } from './Main';
 
 type Props = {
     values: Country

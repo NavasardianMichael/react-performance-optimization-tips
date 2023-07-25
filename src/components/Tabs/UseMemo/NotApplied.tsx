@@ -1,7 +1,7 @@
 import { memo, useState } from "react"
 import { TextField } from "@mui/material"
 import { getExpensiveCalculationsResult } from "helpers/functions/commons"
-import { WithCodeHinter } from "components/WithCodeHinter/WithCodeHinter"
+import { WithCodeHinter } from "components/WithCodeHinter/Main"
 
 const code = `
 const NotApplied = () => {

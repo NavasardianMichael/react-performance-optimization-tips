@@ -2,7 +2,7 @@ import { memo, useState, useMemo } from "react"
 import { WithCustomProfiler } from "components/WithCustomProfiler/WithCustomProfiler"
 import { getExpensiveCalculationsResult } from "helpers/functions/commons"
 import { TextField } from "@mui/material"
-import { WithCodeHinter } from "components/WithCodeHinter/WithCodeHinter"
+import { WithCodeHinter } from "components/WithCodeHinter/Main"
 
 const code = `
 const Applied = () => {

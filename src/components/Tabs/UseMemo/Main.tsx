@@ -1,4 +1,4 @@
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material"
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material"
 import { useState } from "react"
 import Applied from "./Applied"
 import NotApplied from "./NotApplied"
@@ -8,7 +8,7 @@ export default function UseMemo() {
     const [isUseMemoApplied, setIsUseMemoApplied] = useState(false)
 
     return (
-        <div>
+        <Box>
             <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">useMemo is</FormLabel>
                 <RadioGroup
@@ -22,13 +22,13 @@ export default function UseMemo() {
                     <FormControlLabel value="applied" control={<Radio />} label="Applied" />
                 </RadioGroup>
             </FormControl>
-            <div>
+            <Box>
                 {
                     isUseMemoApplied ?
                     <Applied /> :
                     <NotApplied />
                 }
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }

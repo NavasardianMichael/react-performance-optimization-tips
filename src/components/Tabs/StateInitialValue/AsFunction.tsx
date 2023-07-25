@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material"
-import { WithCodeHinter } from "components/WithCodeHinter/WithCodeHinter"
+import { WithCodeHinter } from "components/WithCodeHinter/Main"
 import { memo, useState } from "react"
 
 const code = `
