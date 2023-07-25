@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-performance-optimization-tips/static/css/main.80c55944.css",
+    "main.js": "/react-performance-optimization-tips/static/js/main.0febcc20.js",
+    "static/js/787.28cb0dcd.chunk.js": "/react-performance-optimization-tips/static/js/787.28cb0dcd.chunk.js",
+    "static/media/webpackBundleAnalyzer.PNG": "/react-performance-optimization-tips/static/media/webpackBundleAnalyzer.6ade338a3161d536fae1.PNG",
+    "index.html": "/react-performance-optimization-tips/index.html",
+    "main.80c55944.css.map": "/react-performance-optimization-tips/static/css/main.80c55944.css.map",
+    "main.0febcc20.js.map": "/react-performance-optimization-tips/static/js/main.0febcc20.js.map",
+    "787.28cb0dcd.chunk.js.map": "/react-performance-optimization-tips/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80c55944.css",
+    "static/js/main.0febcc20.js"
+  ]
+}
